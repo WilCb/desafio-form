@@ -34,13 +34,27 @@ form .box {
     border: 1px solid #E4E4E4;
 }
 
-.box input:valid {
-    border: 1px solid #4CB050;
+/* Alerta */
+
+.aviso {
+    display: none;
+    font-size: 0.875rem;
+    color: red;
 }
 
-.box input:valid:focus {
-    outline: 2px solid #4CB050;
+.email:valid~.alerta {
+    display: none;
 }
+
+.email:invalid:placeholder-shown~.aviso {
+    display: none;
+}
+
+.email:invalid:not(placeholder-shown)~.aviso {
+    display: block;
+}
+
+/* Fim alerta */
 
 .box select {
     padding: 0.5rem;
@@ -73,4 +87,8 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+form button:disabled {
+    background-color: #C9C9C9;
 }
