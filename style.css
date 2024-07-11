@@ -34,6 +34,10 @@ form .box {
     border: 1px solid #E4E4E4;
 }
 
+.box input:valid {
+    border: 1px solid #4CB050;
+}
+
 .box select {
     padding: 0.5rem;
     background-color: #F2F2F2;
