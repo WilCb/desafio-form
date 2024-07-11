@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form action="">
+        <h1 class="title">Cadastro</h1>
+        <div class="box">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required maxlength="50" minlength="3" oninvalid="this.setCustomValidity('Campo obrigatorio')">
+        </div>
+        <div class="box">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required oninvalid="this.setCustomValidity('Campo obrigatorio')">
+        </div>
+        <div class="box">
+            <label for="pwd">Senha:</label>
+            <input type="password" id="pwd" required oninvalid="this.setCustomValidity('Campo obrigatorio')">
+        </div>
+
+        <h2 class="subtitle">Gênero:</h2>
+        <div class="doble-box">
+            <div class="box--genero">
+                <input type="radio" name="genero" required>
+                <label for="genero">Masculino</label>
+            </div>
+
+            <div class="box--genero">
+                <input type="radio" name="genero" required>
+                <label for="genero">Feminino</label>
+            </div>
+        </div>
+        <div class="box">
+            <label for="dn">Data de Nascimento:</label>
+            <input type="date" id="dn" required>
+        </div>
+        <div class="box">
+            <label for="pais">País</label>
+            <select name="pais" id="pais" required>
+                <option value="" selected>Selecione</option>
+                <option value="Brasil">Brasil</option>
+            </select>
+        </div>
+
+        <div class="box">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required maxlength="11" minlength="11">
+        </div>
+
+        <div>
+            <input type="checkbox" id="termos" required>
+            <label for="termos">Aceito os Termos e Condições</label>
+        </div>
+        <div><input type="checkbox" id="newsletter">
+            <label for="newsletter">Inscrever-se na newsletter</label>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+
+</html>
