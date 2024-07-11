@@ -21,15 +21,15 @@
         <h1 class="title">Cadastro</h1>
         <div class="box">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" required maxlength="50" minlength="3" oninvalid="this.setCustomValidity('Campo obrigatorio')">
+            <input type="text" id="nome" required pattern="[A-Za-z].{2,}" title="Informe seu nome(minimo de 3 caracteres e apenas letras)">
         </div>
         <div class="box">
             <label for="email">E-mail:</label>
-            <input type="email" id="email" required oninvalid="this.setCustomValidity('Campo obrigatorio')">
+            <input type="email" id="email" required minlength="13" maxlength="50" placeholder="exemplo@exemplo.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="exe@exemplo.com">
         </div>
         <div class="box">
             <label for="pwd">Senha:</label>
-            <input type="password" id="pwd" required oninvalid="this.setCustomValidity('Campo obrigatorio')">
+            <input type="password" id="pwd" required pattern=".{6,}" title="minimo de 6 caracteres">
         </div>
 
         <h2 class="subtitle">Gênero:</h2>
@@ -58,7 +58,7 @@
 
         <div class="box">
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" required maxlength="11" minlength="11">
+            <input type="tel" id="telefone" required maxlength="11" minlength="11" pattern="[0-9]{11}" title="Apenas números com o DDD. Exemplo: dd9xxxxxxxx">
         </div>
 
         <div>
